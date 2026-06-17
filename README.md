@@ -1,26 +1,48 @@
 # MetaLens
 
-A web based Meta store viewer, which can access and analyse huge metadata from Parquet,Hudi,Iceberg and Delta table formats, without registering them on a catalog.
-Users can just enter a s3 location and its details and get access to Metalens with a click
+MetaLens is a web-based metadata explorer for Parquet, Hudi, Iceberg, and Delta tables.
+It lets users point the app at an S3 location, detect the table format, and inspect metadata without registering the dataset in a catalog.
 
+## Quick Start
 
-To run all the services :
+Run the full stack with Docker:
 
 ```bash
 docker compose up
 ```
 
-Default Frontend port : 5173
-Default Backend port : 3000
+Default ports:
 
-The main API backend service explores the object store, identifies table formats and manages requests and responses from and to the indiividual table microservices.
-Since everything is containerised, it allows us to scale indepedent services independently.
+- Frontend: `5173`
+- Backend: `3000`
 
-Tech stack : Docker,Python,FastAPI, Node,Express,PostGres and Node
+## Architecture
 
-OpenSource libraries : aws sdk for js and boto3  for python, DuckDB js package, Shadcn and MagicUI for UI,axios,pyarrow, FastAvro,PySpark
+The API backend scans object storage, identifies table formats, and routes requests to the appropriate table-specific microservices.
+Because the services are containerized, they can be developed and scaled independently.
 
-Refer to individual service directories for corresponding microservice documentation
+## Tech Stack
+
+- Docker
+- Python
+- FastAPI
+- Node.js
+- Express
+- PostgreSQL
+
+## Libraries
+
+- AWS SDK for JavaScript
+- boto3
+- DuckDB JS
+- Shadcn UI
+- Magic UI
+- axios
+- pyarrow
+- FastAvro
+- PySpark
+
+Refer to the individual service directories for service-specific documentation.
 
 ### For OpenAPI Doc
 
