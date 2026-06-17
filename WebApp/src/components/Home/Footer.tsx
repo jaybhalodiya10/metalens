@@ -42,12 +42,6 @@ export default function Footer() {
           </a>
         </div>
       </div>
-
-      {/* Made with Love */}
-      <p className="winky-sans-font mt-8 text-center text-sm text-gray-600 dark:text-gray-400">
-        Made with ❤️ & Tested in Production by{" "}
-        <span className="font-semibold">We_Don't_Test_Anymore</span>
-      </p>
     </footer>
   );
 }
